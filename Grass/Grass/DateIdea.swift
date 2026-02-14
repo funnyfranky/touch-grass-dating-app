@@ -7,10 +7,12 @@
 
 import Foundation
 
-struct DateIdea: Decodable {
-    let id: Int?
+struct DateIdea: Decodable, Identifiable, Hashable {
+    let id: UUID
     let title: String
     let description: String?
     let location_name: String?
+    let created_at: Date
 }
+
 

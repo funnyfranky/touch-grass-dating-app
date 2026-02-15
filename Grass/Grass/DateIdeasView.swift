@@ -39,14 +39,6 @@ struct DateIdeasView: View {
                             await addTestIdea()
                         }
                     }
-
-//                    Button("Delete Selected Idea") {
-//                        Task {
-//                            await deleteSelectedIdea()
-//                        }
-//                    }
-//                    .disabled(selectedIdea == nil)
-
                 }
                 .buttonStyle(.borderedProminent)
 
@@ -119,8 +111,8 @@ struct DateIdeasView: View {
 
         do {
             try await SupabaseManager.shared.insertDateIdea(
-                title: "Coffee + Sunset Walk",
-                description: "Grab coffee and walk by the water at sunset."
+                title: "Ice cream + Sunset Walk",
+                description: "Grab ice cream and walk by the water at sunset."
             )
 
             // Reload after insert
@@ -131,22 +123,4 @@ struct DateIdeasView: View {
 
         isLoading = false
     }
-
-//    func deleteSelectedIdea() async {
-//        guard let idea = selectedIdea else { return }
-//
-//        isLoading = true
-//        errorMessage = nil
-//
-//        do {
-//            try await SupabaseManager.shared.deleteDateIdea(id: idea.id)
-//            ideas = try await SupabaseManager.shared.fetchAllDateIdeas()
-//            selectedIdea = nil
-//        } catch {
-//            errorMessage = "Delete failed: \(error.localizedDescription)"
-//        }
-//
-//        isLoading = false
-//    }
-
 }

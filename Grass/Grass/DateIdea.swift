@@ -8,11 +8,10 @@
 import Foundation
 
 struct DateIdea: Decodable, Identifiable, Hashable {
-    let id: UUID
+    let id: Int
+    let created_at: String
     let title: String
     let description: String?
     let location_name: String?
-    let created_at: Date
+    let created_by: UUID?
 }
-
-

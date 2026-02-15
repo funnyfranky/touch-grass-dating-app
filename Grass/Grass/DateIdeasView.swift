@@ -74,7 +74,7 @@ struct DateIdeasView: View {
                             .font(.subheadline)
                             .foregroundColor(.secondary)
 
-                        Text("Created: \(idea.created_at.formatted())")
+                        Text("Created: \(idea.created_at)")
                             .font(.caption)
                             .foregroundColor(.gray)
                     }

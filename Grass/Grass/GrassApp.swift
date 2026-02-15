@@ -11,7 +11,7 @@ import SwiftUI
 struct GrassApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DateIdeasView()
         }
     }
 }
